@@ -18,10 +18,3 @@ describe Footman do
   end
 
 end
-
-# read spec code
-# understand what tests and what each test is expecting
-# start coding to satisfy the first test
-# (run) bundle exec rspec spec/test_##.rb
-# create new classes as you progress
-# use binding.pry

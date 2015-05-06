@@ -21,6 +21,7 @@ describe Barracks do
       # Make the barracks believe it only has 1 food item left, even though it starts with 80
       # This is done by overwriting the `food` getter method
       @barracks.should_receive(:food).and_return(1)
+      # binding .pry
       expect(@barracks.can_train_footman?).to be_falsey
     end
 
