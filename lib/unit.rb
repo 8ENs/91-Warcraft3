@@ -8,10 +8,15 @@ attr_reader :attack_power
   end
 
   def attack!(enemy)
-    enemy.damage(@attack_power)
+    #return enemy.damage(@attack_power) if health_points && enemy.health_points
+    puts "ORANGE"
   end
 
   def damage(points)
     @health_points -= points
+  end
+
+  def dead?
+    health_points <= 0
   end
 end

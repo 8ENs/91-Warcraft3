@@ -1,9 +1,11 @@
 class Barracks
-attr_accessor :gold, :food
+attr_accessor :gold, :food, :lumber, :health_points
 
   def initialize
     @gold = 1000
     @food = 80
+    @lumber = 500
+    @health_points = 500
   end
 
   def can_train_footman?
@@ -29,6 +31,10 @@ attr_accessor :gold, :food
       return Peasant.new
     end
   end
+
+  # def damage
+
+  # end
 end
 
 # read code for spec file
