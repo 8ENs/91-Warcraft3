@@ -32,9 +32,22 @@ attr_accessor :gold, :food, :lumber, :health_points
     end
   end
 
-  # def damage
+  def can_train_siege_engine?
+    gold >= 200 && food >= 3 && lumber >= 60
+  end
 
-  # end
+  def train_siege_engine
+    if can_train_siege_engine?
+      @gold -= 200
+      @food -= 3
+      @lumber -= 60
+      return Siege.new
+    end
+  end
+
+  def damage(points) # create building parent class ?
+    @health_points -= points
+  end
 end
 
 # read code for spec file

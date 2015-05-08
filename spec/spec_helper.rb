@@ -6,7 +6,8 @@ require 'rspec'
 
 def safely_require(file)
   require_relative file
-rescue LoadError
+rescue LoadError => e
+  puts e.message
   # ignore
 end
 
@@ -14,4 +15,4 @@ safely_require '../lib/unit'
 safely_require '../lib/footman'
 safely_require '../lib/barracks'
 safely_require '../lib/peasant'
-safely_require '../seige_engine.rb'
+safely_require '../lib/siege'
